@@ -45,48 +45,18 @@
             </div>
             <script>
                 document.getElementById('avatarUpload').addEventListener('change', function (event) {
-    const file = event.target.files[0]; // Get the selected file
-    if (file) {
-        const reader = new FileReader(); // Create a FileReader to read the file
-        reader.onload = function (e) {
-            const profileIcon = document.querySelector('.profile-icon img'); // Select the profile icon image
-            profileIcon.src = e.target.result; // Set the new image source
-        };
-        reader.readAsDataURL(file); // Read the file as a Data URL
-    }
-});
-
-            </script>
-           <!--- <script>
-                document.getElementById('avatarUpload').addEventListener('change', function (event) {
-                    const file = event.target.files[0];
+                    const file = event.target.files[0]; // Get the selected file
                     if (file) {
-                        const formData = new FormData();
-                        formData.append('avatar', file);
-            
-                        // Replace 'upload.php' with the path to your PHP file
-                        fetch('upload.php', {
-                            method: 'POST',
-                            body: formData,
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                if (data.success) {
-                                    const profileIcon = document.querySelector('.profile-icon img');
-                                    profileIcon.src = data.imageUrl; // Update the profile image with the uploaded image URL
-                                } else {
-                                    alert('Error uploading image: ' + data.error);
-                                }
-                            })
-                            .catch(error => console.error('Error:', error));
+                        const reader = new FileReader(); // Create a FileReader to read the file
+                        reader.onload = function (e) {
+                            const profileIcon = document.querySelector('.profile-icon img'); // Select the profile icon image
+                            profileIcon.src = e.target.result; // Set the new image source
+                        };
+                        reader.readAsDataURL(file); // Read the file as a Data URL
                     }
                 });
-            </script>-->
-            
-            
-
+            </script>
         </div>
-        
         <div class="weather-data">
             <div class="weather-left">
                 <div class="card">
@@ -330,5 +300,4 @@
     <!--<script src="avatarup.php"></script>-->
 
 </body>
-
 </html>
