@@ -401,21 +401,6 @@ hr {
     text-decoration: underline;
 }
 
-
-/* Blur effect */
-/* .card h2 + .day-forecast {
-    filter: blur(8px);
-}
-
-.weather-right #todayhighlights,
-.weather-right #todayat {
-    filter: none;
-}
-
-.weather-right h2, .hourly-forecast {
-    filter: blur(8px);
-}   */
-
 /* Responsive design */
 @media (max-width: 1100px) {
     .weather-data {

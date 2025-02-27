@@ -1,7 +1,7 @@
 let cityInput = document.getElementById('city_input'),
     searchBtn = document.getElementById('searchBtn'),
     locationBtn = document.getElementById('locationBtn'),
-    api_key = "96eeee3c4257597c6d7004abea12a0ee",
+    api_key = "fb52291c32423b13dd95d18225d39687",
     currentWeatherCard = document.querySelectorAll('.weather-left .card')[0],
     fiveDaysForecastCard = document.querySelectorAll('.day-forecast')[0]; 
     aqiCard = document.querySelectorAll('.highlights .card')[0];
@@ -37,50 +37,50 @@ function getWeatherDetails(name, lat, lon, country, state) {
         let{co,no,no2,o3,so2,pm2_5,pm10,nh3} 
         = data.list[0].components;
         aqiCard.innerHTML = `
-        <div class="card-head">
-        <p>Air Quality Index</p>
-                            <p class="air-index aqi-${data.list[0].main.aqi}">${aqiList[data.list[0].main.aqi -1]}</p>
-                        </div>
+            <div class="card-head">
+                <p>Air Quality Index</p>
+                <p class="air-index aqi-${data.list[0].main.aqi}">${aqiList[data.list[0].main.aqi -1]}</p>
+            </div>
 
-                        <div class="air-indices">
-                            <i class="fa-regular fa-wind fa-3x"></i>
-                            <div class="item">
-                                <p>PM2.5</p>
-                                <h2>${pm2_5}</h2>
-                            </div>
-                            <div class="item">
-                                <p>PM10</p>
-                                <h2>${pm10}</h2>
-                            </div>
-                            <div class="item">
-                                <p>SO2</p>
-                                <h2>${so2}</h2>
-                            </div>
-                            <div class="item">
-                                <p>CO</p>
-                                <h2>${co}</h2>
-                            </div>
-                            <div class="item">
-                                <p>NO</p>
-                                <h2>${no}</h2>
-                            </div>
-                            <div class="item">
-                                <p>NO2</p>
-                                <h2>${no2}</h2>
-                            </div>
-                            <div class="item">
-                                <p>NH3</p>
-                                <h2>${nh3}</h2>
-                            </div>
-                            <div class="item">
-                                <p>O3</p>
-                                <h2>${o3}</h2>
-                            </div>
-                        </div>
+            <div class="air-indices">
+                <i class="fa-regular fa-wind fa-3x"></i>
+                <div class="item">
+                    <p>PM2.5</p>
+                    <h2>${pm2_5}</h2>
+                </div>
+                <div class="item">
+                    <p>PM10</p>
+                    <h2>${pm10}</h2>
+                </div>
+                <div class="item">
+                    <p>SO2</p>
+                    <h2>${so2}</h2>
+                </div>
+                <div class="item">
+                    <p>CO</p>
+                    <h2>${co}</h2>
+                </div>
+                <div class="item">
+                    <p>NO</p>
+                    <h2>${no}</h2>
+                </div>
+                <div class="item">
+                    <p>NO2</p>
+                    <h2>${no2}</h2>
+                </div>
+                <div class="item">
+                    <p>NH3</p>
+                    <h2>${nh3}</h2>
+                </div>
+                <div class="item">
+                    <p>O3</p>
+                    <h2>${o3}</h2>
+                </div>
+            </div>
         `;
         
     }).catch(() => {
-            alert(`Failed to fetch air data`);
+        alert(`Failed to fetch air data`);
     });
     // Fetching the current weather data
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
