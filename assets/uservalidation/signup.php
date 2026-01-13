@@ -50,12 +50,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $mail = new PHPMailer(true);
                 try {
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.gmail.com';
+                    $mail->Host = 'host_name';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'skycast321@gmail.com';
-                    $mail->Password = 'vglj bzpm yypd nkmm';
+                    $mail->Username = 'your_email';
+                    $mail->Password = 'your_password';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                    $mail->Port = 587;
+                    $mail->Port = your_port;
 
                     $mail->setFrom('skycast321@gmail.com', 'Sky-Cast');
                     $mail->addAddress($email);
