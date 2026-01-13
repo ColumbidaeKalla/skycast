@@ -29,12 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
                 // Server settings
                 $mail->isSMTP();                                            // Send using SMTP
-                $mail->Host       = 'smtp.gmail.com';                     // Set the SMTP server
+                $mail->Host       = 'your_host';                     // Set the SMTP server
                 $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                $mail->Username   = 'surojkasai@gmail.com';               // SMTP username
-                $mail->Password   = 'qegp igvj vvuq hbfp';                  // SMTP password
+                $mail->Username   = 'your_email';               // SMTP username
+                $mail->Password   = 'your_password';                  // SMTP password
                 $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption
-                $mail->Port       = 587;                                    // TCP port for TLS
+                $mail->Port       = your_port;                                    // TCP port for TLS
 
                 // Recipients
                 $mail->setFrom('surojkasai@gmail.com', 'Your Website');
